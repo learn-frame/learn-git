@@ -4,7 +4,7 @@
 
 ## menu
 
-- [删除 git 中的所有提交历史记录]()
+- [删除 git 中的所有提交历史记录](https://github.com/learn-frame/learn-git/blob/master/docs/clearAllComment.md)
 
 ## License
 
