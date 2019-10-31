@@ -4,7 +4,7 @@
 
 ## Recipes
 
-- [删除 git 中的所有提交历史记录](https://github.com/learn-frame/learn-git/blob/master/docs/clearAllComment.md)
+- [删除 git 所有历史提交记录，但保留 contributions](https://github.com/learn-frame/learn-git/blob/master/docs/clearAllComment.md)
 - [重命名分支](https://github.com/learn-frame/learn-git/blob/master/docs/renameBranchName.md)
 - [解决无效的 .gitignore 问题](https://github.com/learn-frame/learn-git/blob/master/docs/invalidGitIgnore.md)
 
