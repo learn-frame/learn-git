@@ -12,6 +12,8 @@
 
 - [解决无效的 .gitignore 问题](./docs/invalidGitIgnore.md)
 
+- [拉取远端分支](./docs/fetchRemoteBranch.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
