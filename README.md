@@ -16,6 +16,8 @@
 
 - [tag 相关的操作汇总](./docs/tags.md)
 
+- [删除本地远程跟踪分支](./docs/clearRemoteBranch.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
