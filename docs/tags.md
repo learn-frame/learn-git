@@ -70,7 +70,7 @@ git reset --hard ee8c46
 
 ## 根据 tag 创建分支
 
-有时我们根据旧 tag 进行版本回退了, 但新的 tag 未来还要用(比如复盘鞭尸...), 因此这个 tag 应该转成分支, 接下来 checkout 就好了.
+有时我们根据旧 tag 进行版本回退了, 但新的 tag 未来还要用(比如复盘鞭尸...), 因此这个 tag 应该转成分支.
 
 ```ts
 git branch feature/xxx v1.0.1
