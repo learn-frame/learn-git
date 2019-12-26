@@ -4,7 +4,7 @@
 
 直接重命名本地分支即可
 
-```shell
+```ts
 git branch -m oldName newName
 ```
 
@@ -12,24 +12,24 @@ git branch -m oldName newName
 
 a. 先重命名本地分支
 
-```shell
+```ts
 git branch -m oldName newName
 ```
 
 b. 删除远程分支
 
-```shell
+```ts
 git push --delete origin oldName
 ```
 
 c. 推送新命名的本地分支
 
-```shell
+```ts
 git push origin newName
 ```
 
 d. 把修改后的本地分支与远程分支关联
 
-```shell
+```ts
 git branch --set-upstream-to origin/newName
 ```

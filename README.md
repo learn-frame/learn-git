@@ -14,6 +14,8 @@
 
 - [拉取远端分支](./docs/fetchRemoteBranch.md)
 
+- [tag 相关的操作汇总](./docs/tags.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
