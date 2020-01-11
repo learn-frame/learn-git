@@ -18,6 +18,8 @@
 
 - [删除本地远程跟踪分支](./docs/clearRemoteBranch.md)
 
+- [解决 git 对文件首字母大小写不敏感的问题](./docs/caseSense.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
