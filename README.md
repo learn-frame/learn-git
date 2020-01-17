@@ -20,6 +20,8 @@
 
 - [同步 fork 过来的工程](./docs/syncFork.md)
 
+- [解决 git 对文件首字母大小写不敏感的问题](./docs/caseSense.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
