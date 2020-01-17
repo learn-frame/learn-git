@@ -18,6 +18,8 @@
 
 - [删除本地远程跟踪分支](./docs/clearRemoteBranch.md)
 
+- [同步 fork 过来的工程](./docs/syncFork.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
