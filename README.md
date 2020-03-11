@@ -4,6 +4,8 @@
 
 ## Recipes
 
+- [基础概念](./docs/concept.md)
+
 - [配置用户名和邮箱](./docs/configUsernameAndEmail.md)
 
 - [删除 git 所有历史提交记录，但保留 contributions](./docs/clearAllComment.md)
