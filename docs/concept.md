@@ -50,7 +50,7 @@ git branch -f master HEAD~3
 
 一言以蔽之: git reset 是把 HEAD 向后移动, 而 git revert 是 HEAD 继续前进. git reset 就是回退到上一次提交, 本次提交就被删掉了(实际被删掉的 commit 被放到了暂存区, 并未被完全移除); git revert 会创建一个新的 commit, 使这个新的 commit 跟上一次提交相同.
 
-下面的图例中, 左图为 reset, 右图为 reset
+下面的图例中, 左图为 reset, 右图为 revert
 
 ![reset](../images/reset.jpg)
 ![revert](../images/revert.jpg)
