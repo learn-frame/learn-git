@@ -54,3 +54,13 @@ git branch -f master HEAD~3
 
 ![reset](../images/reset.jpg)
 ![revert](../images/revert.jpg)
+
+## cherry-pick
+
+用于将某些次提交合并到一个分支, 比如在 feature/a 提交了三个 commit, 分别是 5e2e1f0, cdc0c1e, a7fef64, 我想取前两个提交合并到另一个分支 feature/b, 可以这么做:
+
+```bash
+git checkout feature/b
+
+git cherry-pick 5e2e1f0 cdc0c1e
+```
