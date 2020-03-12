@@ -64,3 +64,12 @@ git checkout feature/b
 
 git cherry-pick 5e2e1f0 cdc0c1e
 ```
+
+## rebase -i HEAD~
+
+命令行的 rebase 操作
+
+## fetch
+
+- 从远程仓库下载本地仓库中缺失的提交记录
+- 更新远程分支指针(如 origin/master)
