@@ -2,13 +2,13 @@
 
 ## 本地新建 tag
 
-```ts
+```bash
 git tag v1.0.0
 ```
 
 对于 npm 包管理, 还可以使用如下命令:
 
-```ts
+```bash
 npm version major
 npm version minor
 npm version patch
@@ -18,13 +18,13 @@ npm version patch
 
 新建好的 tag 当然是要推送到远端了:
 
-```ts
+```bash
 git push origin v1.0.0
 ```
 
 如果有多个分支, 可以一并推送:
 
-```ts
+```bash
 git push origin --tags
 
 git push --follow-tags origin master
@@ -32,7 +32,7 @@ git push --follow-tags origin master
 
 ## 删除本地 tag
 
-```ts
+```bash
 git tag -d v1.0.0
 ```
 
@@ -42,7 +42,7 @@ git tag -d v1.0.0
 
 如下方式中第一种肯定是最靠谱的, 因为你无法保证哪个 SB 把分支名命名成了 v1.0.0 .......
 
-```ts
+```bash
 git push origin :refs/tags/v1.0.0
 
 git push origin :v1.0.0
@@ -52,7 +52,7 @@ git push --delete origin v1.0.0
 
 ## 查看某个 tag 的细节
 
-```ts
+```bash
 git show v1.0.0
 ```
 
@@ -64,7 +64,7 @@ tag 最重要的目的就是控制版本节点, 因此可以用来进行版本�
 
 通过上一步可以拿到 tag 的 hash, 所以老样子:
 
-```ts
+```bash
 git reset --hard ee8c46
 ```
 
@@ -72,6 +72,6 @@ git reset --hard ee8c46
 
 有时我们根据旧 tag 进行版本回退了, 但新的 tag 未来还要用(比如复盘鞭尸...), 因此这个 tag 应该转成分支.
 
-```ts
+```bash
 git branch feature/xxx v1.0.1
 ```

@@ -2,7 +2,7 @@
 
 在看 React 源码, 于是把源码 fork 到了自己的仓库, 这个期间 facebook/react 的 master 也一直被提交. 同步 fork 过来的工程, 需要这么做.
 
-```ts
+```bash
 // 先切到 master
 git checkout master
 
