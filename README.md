@@ -24,6 +24,8 @@
 
 - [解决 git 对文件首字母大小写不敏感的问题](./docs/caseSense.md)
 
+- [删除已提交至远端的 commit](./docs/deleteRemoteCommit.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
