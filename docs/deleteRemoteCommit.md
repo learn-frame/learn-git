@@ -6,7 +6,7 @@
 
 首先你要继续提交一个 commit, 这个 commit 是为了把这次 bug 解决掉, 下图中, 假设 `feat: update fetch` 是修复的 commit, `feat: finish cherry-pick` 是错误的 commit
 
-![delete-remote-commit-1](../images/delete-remote-commit-1.jpg)
+![delete-remote-commit-1](https://edge.yancey.app/beg/7mrpb16e-1661064573423.jpg)
 
 ## 步骤 2
 
@@ -17,7 +17,7 @@
 git rebase -i HEAD~2
 ```
 
-![delete-remote-commit-2](../images/delete-remote-commit-2.jpg)
+![delete-remote-commit-2](https://edge.yancey.app/beg/xa4syyt0-1661064573423.jpg)
 
 ## 步骤 3
 
@@ -31,7 +31,7 @@ git push -f origin HEAD^:master
 
 因为你本地还在 rebase 命令行模式, 因此需要退出, 执行下面的语句即可.
 
-![delete-remote-commit-3](../images/delete-remote-commit-3.jpg)
+![delete-remote-commit-3](https://edge.yancey.app/beg/e70nd6ac-1661064573533.jpg)
 
 ```bash
 git rebase --abort

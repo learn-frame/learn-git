@@ -56,7 +56,7 @@ git push --delete origin v1.0.0
 git show v1.0.0
 ```
 
-![git show tagname](../images/showTag.jpg)
+![git show tagname](https://edge.yancey.app/beg/u25e08y4-1661064573537.jpg)
 
 ## 根据 tag 进行版本回退
 

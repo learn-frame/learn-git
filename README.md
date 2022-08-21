@@ -1,6 +1,6 @@
 # Learn Git
 
-学习 git 的笔记以及记录 git 常见和不常见的使用场景。一个值得学习 Git 命令的网站: [learngitbranching](https://learngitbranching.js.org/).
+学习 git 的笔记以及记录 git 常见和不常见的使用场景. 一个值得学习 Git 命令的网站: [learngitbranching](https://learngitbranching.js.org/).
 
 ## Menu
 
@@ -8,7 +8,7 @@
 
 - [配置用户名和邮箱](./docs/configUsernameAndEmail.md)
 
-- [删除 git 所有历史提交记录，但保留 contributions](./docs/clearAllComment.md)
+- [删除 git 所有历史提交记录, 但保留 contributions](./docs/clearAllComment.md)
 
 - [重命名分支](./docs/renameBranchName.md)
 
@@ -25,6 +25,8 @@
 - [解决 git 对文件首字母大小写不敏感的问题](./docs/caseSense.md)
 
 - [删除已提交至远端的 commit](./docs/deleteRemoteCommit.md)
+
+- [修改 commit 信息](./docs/modifyCommitMessage.md)
 
 ## License
 

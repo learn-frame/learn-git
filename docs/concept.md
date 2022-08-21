@@ -1,5 +1,40 @@
 # 基础概念
 
+## 原理
+
+在 .git 的 object 文件夹中存储了 commit, tree, blob 三种类型的对象. 这三者也是 git 最重要的三个对象.
+
+commit 不必多说, 就是我们每次 git commit 生成的那个对象, 有 tree, parent, author, committer 等对象.
+
+tree 就是这个 commit 对应的文件状态的一个快照. 它是以文件夹维度的, 比如下图 912fa6 就是 415c5 这个 commit 的树, 而 912fa6 这棵树下又存在文件夹 images 和 styles. 那么这些文件夹就以 912fa6 的子树存在.
+
+blob 即为单个文件, 之所以使用 blob, 是因为 git 把两个内容相同的文件视为一个 blob, 这意味着某个工程有 a.js, b.js, 但它俩内容完全一致, git 就认为是一个 blob, 这样就节省了空间.
+
+![Commit, Tree, Blob](https://edge.yancey.app/beg/pikqp287-1661002559568.png)
+
+## 查看各种 hash
+
+可以通过以下命令来看一个 hash 对应的类型和文件内容:
+
+```bash
+git cat-file -t 912fa6 # 查看 912fa6 这个 hash 的类型
+git cat-file -p 912fa6 # 查看 912fa6 这个 hash 的文件内容
+```
+
+![查看各种 hash](https://edge.yancey.app/beg/mc041oka-1661004376292.png)
+
+## 分离头指针与 HEAD
+
+当 checkout 到某个 commit 时, 因为没有关联任何分支, 这就叫分离头指针(HEAD Detected), git 会给你一个 warning, 希望你给它指定一个分支名.
+
+![分离头指针](https://edge.yancey.app/beg/9m3lfyfe-1661013931591.png)
+
+我们使用 git log 可以看出, HEAD 没有指向任何分支.
+
+![分离头指针](https://edge.yancey.app/beg/zuiio82z-1661014022054.png)
+
+再说一下 HEAD, HEAD 指向就是最新的 commit, 因此你可以用 `HEAD^` 或者 `HEAD~` 指代本次提交的父 commit; 用 `HEAD^2` 或者 `HEAD~2` 指代本次提交的爷 commit.
+
 ## 创建分支
 
 创建分支有下面两种方式, 第二种的好处是创建分支并切换到该分支.
@@ -14,19 +49,19 @@ git checkout -b feature/xxx
 
 考察下图这个情形, 欲将 bugFix 分支合并到 master 分支:
 
-![before-merge-or-rebase](../images/before-merge-or-rebase.jpg)
+![before-merge-or-rebase](https://edge.yancey.app/beg/986jgi5x-1661064573364.jpg)
 
-### merge
+### git merge
 
 merge 会创建一个新的 commit, 此时 master 现在指向了一个拥有两个父节点的提交记录. 假如从 master 开始沿着箭头向上看, 在到达起点的路上会经过所有的提交记录. 这意味着 master 包含了对代码库的所有修改.
 
-![after-merge](../images/after-merge.jpg)
+![after-merge](https://edge.yancey.app/beg/r4ccsxdz-1661064573235.jpg)
 
-### rebase
+### git rebase
 
 rebase 实际上就是取出一系列的提交记录, "复制"它们, 然后在另外一个地方逐个的放下去. rebase 的优势就是可以创造更线性的提交历史.
 
-![after-rebase](../images/after-rebase.jpg)
+![after-rebase](https://edge.yancey.app/beg/zxp7ccq9-1661064573235.jpg)
 
 ## 分离的 Head
 
@@ -52,10 +87,10 @@ git branch -f master HEAD~3
 
 下面的图例中, 左图为 reset, 右图为 revert
 
-![reset](../images/reset.jpg)
-![revert](../images/revert.jpg)
+![reset](https://edge.yancey.app/beg/aqgde5eg-1661064573535.jpg)
+![revert](https://edge.yancey.app/beg/nvratmvx-1661064573530.jpg)
 
-## cherry-pick
+## git cherry-pick
 
 用于将某些次提交合并到一个分支, 比如在 feature/a 提交了三个 commit, 分别是 5e2e1f0, cdc0c1e, a7fef64, 我想取前两个提交合并到另一个分支 feature/b, 可以这么做:
 
@@ -65,11 +100,28 @@ git checkout feature/b
 git cherry-pick 5e2e1f0 cdc0c1e
 ```
 
-## rebase -i HEAD~
+## git rebase -i HEAD~
 
 命令行的 rebase 操作
 
-## fetch
+## git fetch
 
 - 从远程仓库下载本地仓库中缺失的提交记录
 - 更新远程分支指针(如 origin/master)
+
+## git log
+
+```bash
+git log
+git log -n4 # 只看最新四条
+git log --oneline # 精简的 log
+git log --all --graph # 查看所有分支的 log,
+```
+
+## git help
+
+下面例子打开 web 页面关于 git log 的教程文档.
+
+```bash
+git help --web log
+```
