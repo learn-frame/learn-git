@@ -35,6 +35,16 @@ git cat-file -p 912fa6 # 查看 912fa6 这个 hash 的文件内容
 
 再说一下 HEAD, HEAD 指向就是最新的 commit, 因此你可以用 `HEAD^` 或者 `HEAD~` 指代本次提交的父 commit; 用 `HEAD^2` 或者 `HEAD~2` 指代本次提交的爷 commit.
 
+## fast-forward
+
+本地分支往远端分支做 push, 如果远端分支不是本地分支的祖先, 那它俩就不是 fast forward 了. 反之, 它俩就是 fast forward 的关系. 解决方式如下:
+
+```bash
+gti fetch / git merge --allow-unrelated-histories origin/master
+git fetch / git rebase
+git pull --rebase
+```
+
 ## 创建分支
 
 创建分支有下面两种方式, 第二种的好处是创建分支并切换到该分支.
@@ -124,4 +134,33 @@ git log --all --graph # 查看所有分支的 log,
 
 ```bash
 git help --web log
+```
+
+## git diff
+
+```bash
+git diff # 工作区和暂存区的差异
+git diff -- README.md docs/concept.md # 指定文件工作区和暂存区的差异
+git diff --cached # 暂存区和 HEAD 的差异
+
+git diff feat/a master -- README.md # 两个分支之间 diff 的比较, 可以指定文件
+```
+
+## git reset
+
+```bash
+git reset --hard XXXXXX # 强制回退到某个 commit, 这导致之后的 commit 全部消失
+```
+
+## git rm / git mv
+
+删除文件和修改文件名的标准做法. 虽然大部分情况都会先手动删除, 手动修改文件名. 再 git add . 一把梭. 但用这两个最优雅, 虽然我懒得用...
+
+## git stash
+
+```bash
+git stash
+git stash list
+git stash apply # 恢复 stash 区到工作区, 但保留 stash
+git stash pop # 恢复 stash 区到工作区, 会删除最新的 stash
 ```

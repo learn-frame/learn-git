@@ -28,6 +28,10 @@
 
 - [修改 commit 信息](./docs/modifyCommitMessage.md)
 
+- [合并多个 commit](./docs/combineComments.md)
+
+- [将文件从暂存区清除](./docs/clearStage.md)
+
 ## License
 
 Learn git is licensed under the terms of the [MIT licensed](https://opensource.org/licenses/MIT).
